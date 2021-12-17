@@ -4,7 +4,7 @@ Analog grain simulation on grayscale images, inspired by http://www.ipol.im/pub/
 
 Here is a comparison of different noises.
 
-## Gaussian noise, $\sigma=30$
+## Gaussian noise, std=30
 
 ![image](film_grains/white.jpg)
 
@@ -38,4 +38,4 @@ Here is a comparison of different noises.
 
 # Code
 
-Run `noise_image.py`. The mixing parameter allows the user to control the intensity the grain.
+Run `noise_image.py`. The mix parameter allows the user to control the intensity of the grain.
