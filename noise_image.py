@@ -1,10 +1,11 @@
 from noise_patch_generator import NoisePatchGenerator
 import numpy as np
-from utilities import resize_image
+from utilities import resize_image, load_image
+import matplotlib.pyplot as plt
 
 
 class NoiseImage():
-    def __init__(self, input_image, ksize=11):
+    def __init__(self, input_image, ksize=5):
         # normalize
         self.input_image = input_image.copy()
         if np.max(self.input_image) > 2:  # image not in [0,1] range
@@ -31,3 +32,12 @@ class NoiseImage():
 
     def output_mix(self, l=0.5):
         return l*self.resized_out+(1-l)*self.input_image
+
+
+ksize = 5
+mix = 0.5
+im = load_image('example_images/pixabay_zebra.jpeg', True)
+n = NoiseImage(im, ksize=ksize)
+n.process()
+plt.imsave('example_outputs/zebra'+str(mix) +
+           '.jpg', n.output_mix(0.5), cmap='gray')

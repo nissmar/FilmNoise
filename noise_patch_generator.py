@@ -29,12 +29,7 @@ class NoisePatchGenerator():
     def simulate(self, pixel_value, fac=12):
         '''pixel value in [0,1]'''
         n_circles = -fac*np.log(1.001-pixel_value)  # float
-        # ceil = np.floor(n_circles)
-        # if rd.random()<n_circles-ceil:
         n_circles = int(np.random.randn()*2+n_circles)
-        print(n_circles)
-        # else:
-        #   n_circles = int(n_circles)+1
         p = np.zeros((self.size, self.size))
         m = len(self.ones_batch)
         for _ in range(n_circles):
