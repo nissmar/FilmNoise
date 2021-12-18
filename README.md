@@ -27,7 +27,7 @@ We add white circles to fixed-size black patches, preserving the mean of the pix
 </p>
 
 <p float="left">
-  <img src="example_images/zebra_eye.jpg" width="805"/>
+  <img src="example_outputs/zebra_eye.jpg" width="805"/>
 </p>
 
 
