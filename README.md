@@ -58,5 +58,5 @@ We add white circles to fixed-size black patches, preserving the mean of the pix
 
 # Code
 
-The code can be ran `noise_image.py`. The mix parameter allows the user to control the intensity of the grain, there is a live preview in the notebook.
+The code can be ran in `noise_image.py`. The mix parameter allows the user to control the intensity of the grain, there is a live preview in the notebook.
 The whole process takes about 30s.
