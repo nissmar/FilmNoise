@@ -16,7 +16,7 @@ Although the dynamic range of analog film cannot be matched, its texure can be m
 
 ## Ours 
 
-We add white circles to fixed-size black patches, preserving the mean of the pixel of the original image: 
+We add white circles to fixed-size black patches (5x5), preserving the mean of the original pixel: 
   <img src="film_grains/our_noise.jpg" width="800"/>
 
 # Examples
@@ -58,5 +58,5 @@ We add white circles to fixed-size black patches, preserving the mean of the pix
 
 # Code
 
-The code can be ran in `noise_image.py`. The mix parameter allows the user to control the intensity of the grain, there is a live preview in the notebook.
+The code can be run in `noise_image.py`. The mix parameter allows the user to control the intensity of the grain, there is a live preview in the notebook.
 The whole process takes about 30s.
