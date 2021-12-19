@@ -34,10 +34,11 @@ class NoiseImage():
         return l*self.resized_out+(1-l)*self.input_image
 
 
-ksize = 5
-mix = 0.5
-im = load_image('example_images/pixabay_zebra.jpeg', True)
-n = NoiseImage(im, ksize=ksize)
-n.process()
-plt.imsave('example_outputs/zebra'+str(mix) +
-           '.jpg', n.output_mix(0.5), cmap='gray')
+if __name__ == "main":
+    ksize = 5
+    mix = 0.5
+    im = load_image('example_images/pixabay_zebra.jpeg', True)
+    n = NoiseImage(im, ksize=ksize)
+    n.process()
+    plt.imsave('example_outputs/zebra'+str(mix) +
+               '.jpg', n.output_mix(0.5), cmap='gray')
